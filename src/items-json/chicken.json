@@ -1,0 +1,46 @@
+[
+    {
+        "id": "25",
+        "logo": "/images/items/chicken/1.png",
+        "title": "Крылышки барбекю",
+        "description": "5 крылышек в соусе барбекю, сальсе или садовом соусе",
+        "size": {
+            "small": {"title": "5 крылышек в соусе", "price": "99"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "26",
+        "logo": "/images/items/chicken/2.png",
+        "title": "Куриные палочки",
+        "description": "5 шт + соус (барбекю, сальса или садовый)",
+        "size": {
+            "small": {"title": "5 шт + соус", "price": "89"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "27",
+        "logo": "/images/items/chicken/3.png",
+        "title": "Меню Барбекю Крылышки",
+        "description": "5 крылышек + картофельные или луковые кольца + салат из капусты",
+        "size": {
+            "small": {"title": "5 крылышек", "price": "169"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "28",
+        "logo": "/images/items/chicken/4.png",
+        "title": "Полоски меню",
+        "description": "5 куриных палочек + картофельные дольки + салат из капусты",
+        "size": {
+            "small": {"title": "5 куриных палочек", "price": "149"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    }
+]

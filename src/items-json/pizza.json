@@ -1,0 +1,410 @@
+[
+    {
+        "id": "1",
+        "logo": "/images/items/pizza/1.png",
+        "title": "Пицца гавайская горячая",
+        "description": "Базовая пицца + сладкий соус чили на основе, пепперони, ананас, халапеньо и красный лук",
+        "size": {
+            "small": {"title": "25 см", "price": "99"},
+            "medium": {"title": "35 см", "price": "119"},
+            "big": {"title": "45 см", "price": "139"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "yes",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "2",
+        "logo": "/images/items/pizza/2.png",
+        "title": "Двойная Пепперони",
+        "description": "Базовая пицца + двойная пепперони",
+        "size": {
+            "small": {"title": "20 см", "price": "88"},
+            "medium": {"title": "30 см", "price": "108"},
+            "big": {"title": "50 см", "price": "198"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "yes",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "3",
+        "logo": "/images/items/pizza/3.png",
+        "title": "Луизиана Цыпленок",
+        "description": "Курица, маринованная в остром соусе с соусом из красного перца TABASCO®",
+        "size": {
+            "small": {"title": "28 см", "price": "110"},
+            "medium": {"title": "39 см", "price": "119"},
+            "big": {"title": "49 см", "price": "139"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "yes",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "4",
+        "logo": "/images/items/pizza/4.png",
+        "title":"Пицца Хот Пастрами",
+        "description": "Базовая пицца (соус Медово-Горчичный) + пастрами, сосиски, острый перец, красный лук",
+        "size": {
+            "small": {"title": "35 см", "price": "199"},
+            "medium": {"title": "45 см", "price": "220"},
+            "big": {"title": "55 см", "price": "259"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "yes",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "5",
+        "logo": "/images/items/pizza/5.png",
+        "title":"Пицца Сидней",
+        "description": "Базовая пицца с медово-горчичным соусом, говядиной, кедром, грибами и красным луком",
+        "size": {
+            "small": {"title": "25 см", "price": "109"},
+            "medium": {"title": "35 см", "price": "119"},
+            "big": {"title": "45 см", "price": "149"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "6",
+        "logo": "/images/items/pizza/6.png",
+        "title":"Пицца Классик",
+        "description": "Базовая пицца + ветчина, грибы, оливки",
+        "size": {
+            "small": {"title": "29 см", "price": "113"},
+            "medium": {"title": "39 см", "price": "113"},
+            "big": {"title": "49 см", "price": "133"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "7",
+        "logo": "/images/items/pizza/7.png",
+        "title":"Пицца Все Сыры",
+        "description": "Базовая пицца + кедр, телемеа, орегано",
+        "size": {
+            "small": {"title": "25 см", "price": "98"},
+            "medium": {"title": "35 см", "price": "118"},
+            "big": {"title": "45 см", "price": "148"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "8",
+        "logo": "/images/items/pizza/8.png",
+        "title":"Плотоядная пицца",
+        "description": "Базовая пицца + ветчина, бекон, пепперони",
+        "size": {
+            "small": {"title": "25 см", "price": "102"},
+            "medium": {"title": "45 см", "price": "142"},
+            "big": {"title": "60 см", "price": "202"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "9",
+        "logo": "/images/items/pizza/9.png",
+        "title":"Дольки для пиццы",
+        "description": "Базовая пицца + нарезанный кубиками картофель (дольками), сосиски, болгарский перец, лук",
+        "size": {
+            "small": {"title": "25 см", "price": "114"},
+            "medium": {"title": "35 см", "price": "134"},
+            "big": {"title": "45 см", "price": "168"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "yes",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "10",
+        "logo": "/images/items/pizza/10.png",
+        "title":"Пицца Медово-Горчичная",
+        "description": "Базовая пицца + маринованная курица в горчично-медовом соусе, кедр, красный лук",
+        "size": {
+            "small": {"title": "20 см", "price": "89"},
+            "medium": {"title": "30 см", "price": "119"},
+            "big": {"title": "42 см", "price": "139"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "yes",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "11",
+        "logo": "/images/items/pizza/11.png",
+        "title":"Пицца Пастрами",
+        "description": "Базовая пицца + пастрами, телемеа, печеный перец, красный лук",
+        "size": {
+            "small": {"title": "25 см", "price": "93"},
+            "medium": {"title": "35 см", "price": "103"},
+            "big": {"title": "45 см", "price": "133"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "12",
+        "logo": "/images/items/pizza/12.png",
+        "title":"Пицца Страна",
+        "description": "Базовая пицца + бекон, кукуруза, лук, грибы",
+        "size": {
+            "small": {"title": "33 см", "price": "119"},
+            "medium": {"title": "45 см", "price": "169"},
+            "big": {"title": "62 см", "price": "209"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "13",
+        "logo": "/images/items/pizza/13.png",
+        "title":"Пицца с горячим сыром",
+        "description": "Базовая пицца + кедр, телемеа, помидоры, острый перец, орегано",
+        "size": {
+            "small": {"title": "25 см", "price": "129"},
+            "medium": {"title": "35 см", "price": "169"},
+            "big": {"title": "45 см", "price": "219"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "14",
+        "logo": "/images/items/pizza/14.png",
+        "title":"Пицца Алоха",
+        "description": "Базовая пицца + ветчина, ананас, кукуруза, лук",
+        "size": {
+            "small": {"title": "25 см", "price": "97"},
+            "medium": {"title": "35 см", "price": "117"},
+            "big": {"title": "45 см", "price": "127"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "15",
+        "logo": "/images/items/pizza/15.png",
+        "title":"Пицца Лайт",
+        "description": "Базовая пицца + болгарский перец, лук, помидоры, кукуруза, грибы",
+        "size": {
+            "small": {"title": "25 см", "price": "105"},
+            "medium": {"title": "35 см", "price": "115"},
+            "big": {"title": "50 см", "price": "135"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "16",
+        "logo": "/images/items/pizza/16.png",
+        "title":"Пицца Океан",
+        "description": "Базовая пицца + тунец, кукуруза, лук, оливки",
+        "size": {
+            "small": {"title": "20 см", "price": "78"},
+            "medium": {"title": "35 см", "price": "118"},
+            "big": {"title": "50 см", "price": "198"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "17",
+        "logo": "/images/items/pizza/17.png",
+        "title":"Деревенская пицца",
+        "description": "Базовая пицца + курица, оливки, лук, болгарский перец",
+        "size": {
+            "small": {"title": "25 см", "price": "112"},
+            "medium": {"title": "35 см", "price": "132"},
+            "big": {"title": "45 см", "price": "162"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "yes",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "18",
+        "logo": "/images/items/pizza/18.png",
+        "title":"Пицца барбекю",
+        "description": "Базовая пицца + соус барбекю, лук, кукуруза, бекон, грибы + курица или сосиски",
+        "size": {
+            "small": {"title": "23 см", "price": "111"},
+            "medium": {"title": "38 см", "price": "147"},
+            "big": {"title": "57 см", "price": "218"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "yes",
+            "sausage": "yes",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "19",
+        "logo": "/images/items/pizza/19.png",
+        "title":"Пицца Эгеа",
+        "description": "Базовая пицца (тонкая столешница, соус Sweet Chili) + телемеа, вяленые помидоры, лук, кукуруза, грибы",
+        "size": {
+            "small": {"title": "25 см", "price": "79"},
+            "medium": {"title": "35 см", "price": "99"},
+            "big": {"title": "45 см", "price": "119"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "20",
+        "logo": "/images/items/pizza/20.png",
+        "title":"Средиземноморская пицца",
+        "description": "Базовая пицца (тонкая столешница) + телемеа, вяленые помидоры, маслины, маслины, лук, орегано",
+        "size": {
+            "small": {"title": "25 см", "price": "68"},
+            "medium": {"title": "30 см", "price": "88"},
+            "big": {"title": "35 см", "price": "118"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "21",
+        "logo": "/images/items/pizza/21.png",
+        "title":"Пицца Аргентина",
+        "description": "Базовая пицца + говядина, болгарский перец, кедр, лук, печеный перец",
+        "size": {
+            "small": {"title": "25 см", "price": "91"},
+            "medium": {"title": "35 см", "price": "111"},
+            "big": {"title": "45 см", "price": "131"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "22",
+        "logo": "/images/items/pizza/22.png",
+        "title":"Пицца Прованс",
+        "description": "Базовая пицца + сыр с плесенью, вяленые помидоры, курица, лук, печеный перец",
+        "size": {
+            "small": {"title": "25 см", "price": "94"},
+            "medium": {"title": "30 см", "price": "114"},
+            "big": {"title": "45 см", "price": "154"}
+          },
+        "ingredients": {
+            "meat": "no",
+            "chicken": "yes",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    },
+    {
+        "id": "23",
+        "logo": "/images/items/pizza/23.png",
+        "title":"Пицца Экстраваганцца",
+        "description": "Базовая пицца + ветчина, болгарский перец, кукуруза, лук, помидоры, оливки, пепперони, грибы",
+        "size": {
+            "small": {"title": "25 см", "price": "108"},
+            "medium": {"title": "35 см", "price": "128"},
+            "big": {"title": "45 см", "price": "158"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "no"
+        }
+    },
+    {
+        "id": "24",
+        "logo": "/images/items/pizza/24.png",
+        "title":"Пицца Мексика",
+        "description": "Базовая пицца + соус сальса, пепперони, кукуруза, лук, халапеньо, чипсы из тортильи",
+        "size": {
+            "small": {"title": "25 см", "price": "90"},
+            "medium": {"title": "40 см", "price": "130"},
+            "big": {"title": "50 см", "price": "190"}
+          },
+        "ingredients": {
+            "meat": "yes",
+            "chicken": "no",
+            "sausage": "no",
+            "spicy": "yes"
+        }
+    }
+]

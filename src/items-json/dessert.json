@@ -1,0 +1,46 @@
+[
+    {
+        "id": "29",
+        "logo": "/images/items/dessert/1.png",
+        "title": "Десертная чашка",
+        "description": "Десертная чашка с фисташками и шоколадом",
+        "size": {
+            "small": {"title": "Десертная чашка с фисташками", "price": "89"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "30",
+        "logo": "/images/items/dessert/2.png",
+        "title": "Чашка пустыни",
+        "description": "Чашка пустыни с шоколадом и клубникой",
+        "size": {
+            "small": {"title": "Чашка пустыни с шоколадом", "price": "59"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "31",
+        "logo": "/images/items/dessert/3.png",
+        "title": "Чашка пустыни Визин",
+        "description": "Чашка пустыни Фриска и Визин",
+        "size": {
+            "small": {"title": "Чашка пустыни Фриска", "price": "109"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "32",
+        "logo": "/images/items/dessert/4.png",
+        "title": "Чашка пустыни Минти",
+        "description": "Чашка пустыни Минти",
+        "size": {
+            "small": {"title": "Чашка пустыни, Минти", "price": "119"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    }
+]

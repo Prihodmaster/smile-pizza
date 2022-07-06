@@ -1,0 +1,68 @@
+[
+    {
+        "id": "47",
+        "logo": "/images/items/sauce/1.png",
+        "title": "Соус барбекю",
+        "description": "Соус барбекю",
+        "size": {
+            "small": {"title": "Соус барбекю, порция", "price": "92"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "48",
+        "logo": "/images/items/sauce/2.png",
+        "title": "Соус пицца",
+        "description": "Соус пицца",
+        "size": {
+            "small": {"title": "Соус пицца, порция", "price": "103"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "49",
+        "logo": "/images/items/sauce/3.png",
+        "title": "Соус сальса",
+        "description": "Соус сальса",
+        "size": {
+            "small": {"title": "Соус сальса, порция", "price": "69"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "50",
+        "logo": "/images/items/sauce/4.png",
+        "title": "Сладкий соус чили",
+        "description": "Сладкий соус чили",
+        "size": {
+            "small": {"title": "Соус чили, порция", "price": "99"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "51",
+        "logo": "/images/items/sauce/5.png",
+        "title": "Соус медово-горчичный",
+        "description": "Соус медово-горчичный",
+        "size": {
+            "small": {"title": "Соус медово-горчичный, порция", "price": "88"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "52",
+        "logo": "/images/items/sauce/6.png",
+        "title": "Быстрый соус с TABASCO®",
+        "description": "Острый соус с соусом из красного перца",
+        "size": {
+            "small": {"title": "Соус из красного перца", "price": "119"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    }
+]

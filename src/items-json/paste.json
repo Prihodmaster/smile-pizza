@@ -1,0 +1,46 @@
+[
+    {
+        "id": "37",
+        "logo": "/images/items/paste/1.png",
+        "title": "Паста Болоньезе",
+        "description": "пенне, томатная мякоть, говядина, оливковое масло, базилик, свежий чеснок, лук",
+        "size": {
+            "small": {"title": "пенне, томатная мякоть, говядина", "price": "69"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "38",
+        "logo": "/images/items/paste/2.png",
+        "title": "Паста Карбонара",
+        "description": "пенне, соус бешамель с мускатным орехом, обжаренный бекон, пармезан, перец",
+        "size": {
+            "small": {"title": "пенне, соус, обжаренный бекон", "price": "49"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "39",
+        "logo": "/images/items/paste/3.png",
+        "title": "Паста «Четыре сыра»",
+        "description": "пенне, соус бешамель с мускатным орехом, сыр с плесенью, моцарелла, пармезан, горгонзола",
+        "size": {
+            "small": {"title": "пенне, сыр с плесенью, моцарелла", "price": "99"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "40",
+        "logo": "/images/items/paste/4.png",
+        "title": "Паста Вердуретта",
+        "description": "Пенне, томатная мякоть, цукини, баклажан, красный перец, лук, оливковое масло, базилик",
+        "size": {
+            "small": {"title": "Пенне, томатная мякоть, цукини", "price": "59"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    }
+]

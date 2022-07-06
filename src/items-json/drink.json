@@ -1,0 +1,46 @@
+[
+    {
+        "id": "33",
+        "logo": "/images/items/drink/1.png",
+        "title": "Coca Cola Zero",
+        "description": "Coca Cola Zero 330ml, 0.5L, 2L",
+        "size": {
+          "small": {"title": "330ml", "price": "35"},
+          "medium": {"title": "0.5L", "price": "55"},
+          "big": {"title": "2L", "price": "115"}
+        }
+    },
+    {
+      "id": "34",
+      "logo": "/images/items/drink/2.png",
+      "title": "Coca Cola",
+      "description": "Coca cola 330ml, 0.5L, 2L",
+      "size": {
+        "small": {"title": "330ml", "price": "29"},
+        "medium": {"title": "0.5L", "price": "49"},
+        "big": {"title": "2L", "price": "99"}
+      }
+  },
+    {
+        "id": "35",
+        "logo": "/images/items/drink/3.png",
+        "title": "Fanta",
+        "description": "Fanta 330ml, 0.5L, 2L",
+        "size": {
+          "small": {"title": "330ml", "price": "30"},
+          "medium": {"title": "0.5L", "price": "50"},
+          "big": {"title": "2L", "price": "100"}
+        }
+    },
+    {
+        "id": "36",
+        "logo": "/images/items/drink/4.png",
+        "title": "Sprite",
+        "description": "Sprite 330ml, 0.5L, 2L",
+        "size": {
+          "small": {"title": "330ml", "price": "32"},
+          "medium": {"title": "0.5L", "price": "52"},
+          "big": {"title": "2L", "price": "102"}
+        }
+    }
+  ]

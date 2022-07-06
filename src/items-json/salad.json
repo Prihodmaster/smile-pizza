@@ -1,0 +1,68 @@
+[
+    {
+        "id": "41",
+        "logo": "/images/items/salad/1.png",
+        "title": "Овощной салат",
+        "description": "Салат, помидоры, кукуруза, оливки, болгарский перец, гренки и соус Цезарь, Винегрет или 1000 островов",
+        "size": {
+            "small": {"title": "помидоры, кукуруза, оливки", "price": "99"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "42",
+        "logo": "/images/items/salad/2.png",
+        "title": "Салат Цезарь",
+        "description": "Салат, курица, кедр, гренки и соус Цезарь, Винегрет или 1000 островов",
+        "size": {
+            "small": {"title": "курица, кедр, гренки и соус", "price": "49"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "43",
+        "logo": "/images/items/salad/3.png",
+        "title": "Салат Джерри",
+        "description": "Салат, ветчина, кукуруза, телема, помидоры, гренки и заправка Цезарь, Винегрет или 1000 островов",
+        "size": {
+            "small": {"title": "ветчина, кукуруза, телема", "price": "58"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "44",
+        "logo": "/images/items/salad/4.png",
+        "title": "Средиземноморский салат",
+        "description": "Салат, оливки, телемеа, помидоры, гренки и соус Цезарь, Винегрет или 1000 островов",
+        "size": {
+            "small": {"title": "оливки, телемеа, помидоры", "price": "119"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "45",
+        "logo": "/images/items/salad/5.png",
+        "title": "Салат Тон",
+        "description": "Салат, тунец, кукуруза, оливки, кедр, помидоры, гренки и соус Цезарь, Винегрет или 1000 островов",
+        "size": {
+            "small": {"title": "тунец, кукуруза, оливки", "price": "69"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    },
+    {
+        "id": "46",
+        "logo": "/images/items/salad/6.png",
+        "title": "Световое меню",
+        "description": "1 небольшой салат + 1 порция ломтиков или колец + 1 соус",
+        "size": {
+            "small": {"title": "1 салат + ломтики", "price": "59"},
+            "medium": {"title": "none", "price": "none"},
+            "big": {"title": "none", "price": "none"}
+          }
+    }
+]
