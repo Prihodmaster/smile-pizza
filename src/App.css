@@ -1,11 +1,25 @@
+@font-face {
+  font-family: 'Balsamiq Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/balsamiq-sans-v10-cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/balsamiq-sans-v10-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/balsamiq-sans-v10-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/balsamiq-sans-v10-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/balsamiq-sans-v10-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/balsamiq-sans-v10-cyrillic-regular.svg#BalsamiqSans') format('svg'); /* Legacy iOS */
+}
+
 * {
+    font-family: 'Balsamiq Sans';
     padding: 0;
     margin: 0;
     list-style: none;
     outline: none;
-    font-family: 'Balsamiq Sans', cursive;
     box-sizing: border-box;
     color: #0c0c0c;
+
 }
 
 body {
