@@ -8,6 +8,12 @@
             "small": {"title": "помидоры, кукуруза, оливки", "price": "99"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Овощной",
+            "size": "small",
+            "price": "99",
+            "total": "0"
           }
     },
     {
@@ -19,6 +25,12 @@
             "small": {"title": "курица, кедр, гренки и соус", "price": "49"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Цезарь",
+            "size": "small",
+            "price": "49",
+            "total": "0"
           }
     },
     {
@@ -30,6 +42,12 @@
             "small": {"title": "ветчина, кукуруза, телема", "price": "58"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Джерри",
+            "size": "small",
+            "price": "58",
+            "total": "0"
           }
     },
     {
@@ -41,6 +59,12 @@
             "small": {"title": "оливки, телемеа, помидоры", "price": "119"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "оливки",
+            "size": "small",
+            "price": "119",
+            "total": "0"
           }
     },
     {
@@ -52,6 +76,12 @@
             "small": {"title": "тунец, кукуруза, оливки", "price": "69"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "кукуруза",
+            "size": "small",
+            "price": "69",
+            "total": "0"
           }
     },
     {
@@ -63,6 +93,12 @@
             "small": {"title": "1 салат + ломтики", "price": "59"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Ломтики",
+            "size": "small",
+            "price": "59",
+            "total": "0"
           }
     }
 ]

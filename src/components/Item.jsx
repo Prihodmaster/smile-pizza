@@ -1,49 +1,34 @@
-import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import {ADD_ITEM_TO_CART, REPLACE_ITEM_CART, SMALL_SIZE, MEDIUM_SIZE, BIG_SIZE} from '../store/types';
 
 function Item({item, selectorVisible}) {
     const dicpatch = useDispatch()
     const totalItems = useSelector(state => state.totalItems)
     const cart = useSelector(state => state.cart)
-    
-    let sizeAllBtn = {
-        smallBtb: true,
-        mediumBtn: false,
-        bigBtn: false
-      }
-    const [sizeBtn, setSizeBtn] = useState(sizeAllBtn)
-    const [itemPrice, setItemPrice] = useState(item.size.small.price)
-    const [itemSize, setItemSize] = useState(item.size.small.title)
-    const [counter, setCounter] = useState(0)
 
     const changeSize = size => {
-        if(size==='small'){
-            setSizeBtn({smallBtb: true, mediumBtn: false, bigBtn: false})
-            setItemPrice(item.size.small.price)
-            setItemSize(item.size.small.title)
-          }
-        if(size==='medium'){
-            setSizeBtn({smallBtb: false, mediumBtn: true, bigBtn: false})
-            setItemPrice(item.size.medium.price)
-            setItemSize(item.size.medium.title)
-        }
-        if(size==='big'){
-            setSizeBtn({smallBtb: false, mediumBtn: false, bigBtn: true})
-            setItemPrice(item.size.big.price)
-            setItemSize(item.size.big.title)
-        }
-    }
-    const addToCart = id =>{
-        let carItem = totalItems.find(item=>item.id===id)
-        dicpatch({
-            type: 'ADD_ITEM_TO_CART', 
-            payload: {id: carItem.id, logo: carItem.logo, title: carItem.title, size: itemSize, price: itemPrice}
-        })
+        size === SMALL_SIZE && dicpatch({type: size, payload: {size: "small", price: item.size.small.price, title: item.size.small.title}, id: item.id})
+        size === MEDIUM_SIZE && dicpatch({type: size, payload: {size: "medium", price: item.size.medium.price, title: item.size.medium.title}, id: item.id})
+        size === BIG_SIZE && dicpatch({type: size, payload: {size: "big", price: item.size.big.price, title: item.size.big.title}, id: item.id})
     }
 
-    const counterItem = () => {
-        setCounter(counter+1)
+    const addToCart = id =>{
+        let findItem = totalItems.find(item=>item.id===id)
+        let carFindItem = cart.find(item=>item.id===id)
+        if(carFindItem === undefined){
+            dicpatch({
+                type: ADD_ITEM_TO_CART, 
+                payload: {id: findItem.id, logo: findItem.logo, title: findItem.title, total: Number(item.stateItem.total)+1, items: [{size: item.stateItem.title, price: item.stateItem.price}]}
+            })
+        }else{
+            dicpatch({
+                type: REPLACE_ITEM_CART, 
+                id: findItem.id,
+                payload: {size: item.stateItem.title, price: item.stateItem.price}
+            })
+        }
     }
+
     return (
         <div className="item">
             <div>
@@ -57,26 +42,22 @@ function Item({item, selectorVisible}) {
             <div>
                 <div className={selectorVisible ? 'item-selector' : 'item-selector off'}>
                     <ul>
-                        <li className={sizeBtn.smallBtb ? "active" : ""} onClick={()=>changeSize('small')}>{item.size.small.title}</li>
-                        <li className={sizeBtn.mediumBtn ? "active" : ""} onClick={()=>changeSize('medium')}>{item.size.medium.title}</li>
-                        <li className={sizeBtn.bigBtn ? "active" : ""} onClick={()=>changeSize('big')}>{item.size.big.title}</li>
+                        <li className={item.stateItem.size === "small" ? "active" : ""} onClick={()=>changeSize(SMALL_SIZE)}>{item.size.small.title}</li>
+                        <li className={item.stateItem.size === "medium" ? "active" : ""} onClick={()=>changeSize(MEDIUM_SIZE)}>{item.size.medium.title}</li>
+                        <li className={item.stateItem.size === "big" ? "active" : ""} onClick={()=>changeSize(BIG_SIZE)}>{item.size.big.title}</li>
                     </ul>
                 </div>
                 <div className="item-bottom">
-                    <b>{itemPrice} грн</b>
+                    <b>{item.stateItem.price} грн</b>
                     <button onClick={()=>addToCart(item.id)}>
                         <span>В корзину</span>
                         {
-                            counter > 0 && <i>{counter}</i>
+                            item.stateItem.total > 0 && <i>{item.stateItem.total}</i>
                         }
                     </button>
                 </div>
             </div>
         </div>
-
-
-            
-
     );
   }
   

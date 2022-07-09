@@ -1,39 +1,23 @@
-import React, { useEffect} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import CartItem from '../components/CartItem';
-
-
-
-
+import {REMOVE_ITEM_CART, CLEAR_CART} from '../store/types';
 
 function Cartpage({items}) {
-  const cart = useSelector(state => state.cart)
   const sum = useSelector(state => state.totalPrice)
   const dicpatch = useDispatch()
-
-  useEffect(() => {
-    let sum = 0
-    cart.forEach(arr => sum += Number(arr.price))
-    dicpatch({type: 'GET_TOTAL_PRICE', payload: sum})
-  }, [cart])
-
-
-  const removeItemCart = id => dicpatch({type: 'REMOVE_ITEM_CART', payload: items.filter(item=>item.id !== id)})
-
+  const removeItemCart = id => dicpatch({type: REMOVE_ITEM_CART, payload: items.filter(item=>item.id !== id), id: id})
     return (
       <div className="cart-container">
         <div className='cart-header'>
           <h2>Корзина</h2>
-          <div className='cart-clear' onClick={()=>dicpatch({type: 'CLEAR_CART'})}>
+          <div className='cart-clear' onClick={()=>dicpatch({type: CLEAR_CART})}>
             <img src='/images/trash.png' alt="logo" />
             <span>Очистить корзину</span>
           </div>
         </div>
         <div className="cart-items">
-
-
-          
         {
           items.length > 0 
           ?
@@ -46,10 +30,6 @@ function Cartpage({items}) {
             <div className="cart-empty-btn"><NavLink to="/"><span>Вернуться назад</span></NavLink></div>
           </div>
         }
-          
-
-
-          
         </div>
         <div className='cart-total'>
           <div className="cart-total-item">Всего товаров:<span>{items.length}</span>шт.</div>

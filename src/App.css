@@ -547,8 +547,11 @@ footer {
     height: max-content;
   }
   .item-bottom {
-    justify-content: space-around;
-}
+    font-size: 25px;
+  } 
+  .item-bottom button span {
+    font-size: 18px;
+  }
 }
 
 

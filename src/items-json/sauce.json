@@ -8,6 +8,12 @@
             "small": {"title": "Соус барбекю, порция", "price": "92"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "барбекю",
+            "size": "small",
+            "price": "92",
+            "total": "0"
           }
     },
     {
@@ -19,6 +25,12 @@
             "small": {"title": "Соус пицца, порция", "price": "103"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Соус пицца",
+            "size": "small",
+            "price": "103",
+            "total": "0"
           }
     },
     {
@@ -30,6 +42,12 @@
             "small": {"title": "Соус сальса, порция", "price": "69"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "сальса",
+            "size": "small",
+            "price": "69",
+            "total": "0"
           }
     },
     {
@@ -41,6 +59,12 @@
             "small": {"title": "Соус чили, порция", "price": "99"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "соус чили",
+            "size": "small",
+            "price": "99",
+            "total": "0"
           }
     },
     {
@@ -52,6 +76,12 @@
             "small": {"title": "Соус медово-горчичный, порция", "price": "88"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "горчичный",
+            "size": "small",
+            "price": "88",
+            "total": "0"
           }
     },
     {
@@ -63,6 +93,12 @@
             "small": {"title": "Соус из красного перца", "price": "119"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "TABASCO",
+            "size": "small",
+            "price": "119",
+            "total": "0"
           }
     }
 ]

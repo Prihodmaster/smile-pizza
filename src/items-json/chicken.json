@@ -8,6 +8,12 @@
             "small": {"title": "5 крылышек в соусе", "price": "99"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Крылышки",
+            "size": "small",
+            "price": "35",
+            "total": "0"
           }
     },
     {
@@ -19,6 +25,12 @@
             "small": {"title": "5 шт + соус", "price": "89"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Палочки",
+            "size": "small",
+            "price": "89",
+            "total": "0"
           }
     },
     {
@@ -30,6 +42,12 @@
             "small": {"title": "5 крылышек", "price": "169"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Крылышки",
+            "size": "small",
+            "price": "169",
+            "total": "0"
           }
     },
     {
@@ -41,6 +59,12 @@
             "small": {"title": "5 куриных палочек", "price": "149"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Палочки",
+            "size": "small",
+            "price": "149",
+            "total": "0"
           }
     }
 ]

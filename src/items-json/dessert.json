@@ -8,6 +8,12 @@
             "small": {"title": "Десертная чашка с фисташками", "price": "89"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "с фисташками",
+            "size": "small",
+            "price": "89",
+            "total": "0"
           }
     },
     {
@@ -19,6 +25,12 @@
             "small": {"title": "Чашка пустыни с шоколадом", "price": "59"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "с шоколадом",
+            "size": "small",
+            "price": "59",
+            "total": "0"
           }
     },
     {
@@ -30,6 +42,12 @@
             "small": {"title": "Чашка пустыни Фриска", "price": "109"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Фриска и Визин",
+            "size": "small",
+            "price": "109",
+            "total": "0"
           }
     },
     {
@@ -41,6 +59,12 @@
             "small": {"title": "Чашка пустыни, Минти", "price": "119"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Пустыня Минти",
+            "size": "small",
+            "price": "119",
+            "total": "0"
           }
     }
 ]

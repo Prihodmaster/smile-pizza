@@ -19,10 +19,10 @@ function Header() {
     const dicpatch = useDispatch()
 
     useEffect(() => {
-      let sum = 0
-      cart.forEach(arr => sum += Number(arr.price))
-      dicpatch({type: 'GET_TOTAL_PRICE', payload: sum})
-    }, [cart])
+        let sum = 0
+        cart.forEach(n => n.items.forEach(i => sum += Number(i.price)))
+        dicpatch({type: 'GET_TOTAL_PRICE', payload: sum})
+      }, [cart])
 
     const toggleMenuMode = () => setIsMenuOpen(!isMenuOpen)
     return (

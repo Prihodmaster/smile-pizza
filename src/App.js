@@ -1,5 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import {SORT_POP, SORT_PRICE, SORT_TITLE} from './store/types';
 import './App.css';
 import Pizzapage from './pages/Pizzapage';
 import Dessertpage from './pages/Dessertpage';
@@ -15,9 +16,9 @@ import Footer from './components/Footer';
 
 
 export const sortByType = (type, arr) => {
-  if(type==='GET_POP') return [...arr.sort((a, b) => Number(a.id) > Number(b.id)  ? 1 : -1)]
-  if(type==='GET_PRICE') return [...arr.sort((a, b) => Number(a.size.small.price) > Number(b.size.small.price)  ? 1 : -1)]
-  if(type==='GET_TITLE') return [...arr.sort((a, b) => a.title > b.title  ? 1 : -1)]
+  if(type ===SORT_POP) return [...arr.sort((a, b) => Number(a.id) > Number(b.id)  ? 1 : -1)]
+  if(type === SORT_PRICE) return [...arr.sort((a, b) => Number(a.size.small.price) > Number(b.size.small.price)  ? 1 : -1)]
+  if(type === SORT_TITLE) return [...arr.sort((a, b) => a.title > b.title  ? 1 : -1)]
 }
 
 function App() {

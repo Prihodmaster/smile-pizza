@@ -8,6 +8,12 @@
           "small": {"title": "330ml", "price": "35"},
           "medium": {"title": "0.5L", "price": "55"},
           "big": {"title": "2L", "price": "115"}
+        },
+        "stateItem": {
+          "title": "330ml",
+          "size": "small",
+          "price": "35",
+          "total": "0"
         }
     },
     {
@@ -19,6 +25,12 @@
         "small": {"title": "330ml", "price": "29"},
         "medium": {"title": "0.5L", "price": "49"},
         "big": {"title": "2L", "price": "99"}
+      },
+      "stateItem": {
+        "title": "330ml",
+        "size": "small",
+        "price": "29",
+        "total": "0"
       }
   },
     {
@@ -30,6 +42,12 @@
           "small": {"title": "330ml", "price": "30"},
           "medium": {"title": "0.5L", "price": "50"},
           "big": {"title": "2L", "price": "100"}
+        },
+        "stateItem": {
+          "title": "330ml",
+          "size": "small",
+          "price": "30",
+          "total": "0"
         }
     },
     {
@@ -41,6 +59,12 @@
           "small": {"title": "330ml", "price": "32"},
           "medium": {"title": "0.5L", "price": "52"},
           "big": {"title": "2L", "price": "102"}
+        },
+        "stateItem": {
+          "title": "330ml",
+          "size": "small",
+          "price": "32",
+          "total": "0"
         }
     }
   ]

@@ -8,6 +8,12 @@
             "small": {"title": "пенне, томатная мякоть, говядина", "price": "69"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Болоньезе",
+            "size": "small",
+            "price": "69",
+            "total": "0"
           }
     },
     {
@@ -19,6 +25,12 @@
             "small": {"title": "пенне, соус, обжаренный бекон", "price": "49"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Карбонара",
+            "size": "small",
+            "price": "49",
+            "total": "0"
           }
     },
     {
@@ -30,6 +42,12 @@
             "small": {"title": "пенне, сыр с плесенью, моцарелла", "price": "99"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Четыре сыра",
+            "size": "small",
+            "price": "99",
+            "total": "0"
           }
     },
     {
@@ -41,6 +59,12 @@
             "small": {"title": "Пенне, томатная мякоть, цукини", "price": "59"},
             "medium": {"title": "none", "price": "none"},
             "big": {"title": "none", "price": "none"}
+          },
+          "stateItem": {
+            "title": "Вердуретта",
+            "size": "small",
+            "price": "59",
+            "total": "0"
           }
     }
 ]
