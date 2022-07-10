@@ -5,7 +5,6 @@ function CartItem({item, remove}) {
     const dicpatch = useDispatch()
     let sum = 0
     item.items.forEach(arr => sum += Number(arr.price))
-
     const plusCartItem = () =>{
         dicpatch({
             type: REPLACE_ITEM_CART, 
@@ -23,7 +22,6 @@ function CartItem({item, remove}) {
             })
         }
     }
-
     return (
         <div className='cart-item'>
             <div className='cart-item-logo'><img src={item.logo} alt="logo" /></div>

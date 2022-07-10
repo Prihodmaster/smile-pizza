@@ -8,6 +8,8 @@ function Cartpage({items}) {
   const sum = useSelector(state => state.totalPrice)
   const dicpatch = useDispatch()
   const removeItemCart = id => dicpatch({type: REMOVE_ITEM_CART, payload: items.filter(item=>item.id !== id), id: id})
+  let total = 0
+  items.forEach(arr => total += Number(arr.total))
     return (
       <div className="cart-container">
         <div className='cart-header'>
@@ -27,22 +29,27 @@ function Cartpage({items}) {
             <img src="/images/cart-empty.svg" alt="корзина пустая" />
             <h2>В корзине пока ничего нет</h2>
             <p>Добавьте товар в <b>корзину</b> и оформите заказ.</p>
-            <div className="cart-empty-btn"><NavLink to="/"><span>Вернуться назад</span></NavLink></div>
+            <div className="cart-back-btn cart-empty-btn"><NavLink to="/"><span>Вернуться назад</span></NavLink></div>
           </div>
         }
         </div>
-        <div className='cart-total'>
-          <div className="cart-total-item">Всего товаров:<span>{items.length}</span>шт.</div>
-          <div className="cart-total-price">Сумма заказа:<span>{sum}</span>грн.</div>
-        </div>
-        <div className='cart-bottom-buttons'>
-          <div className="cart-back-btn">
-            <NavLink to="/">
-              <span>Вернуться назад</span>
-            </NavLink>
+        {
+          items.length > 0 && 
+          <div>
+            <div className='cart-total'>
+              <div className="cart-total-item">Всего товаров:<span>{total}</span>шт.</div>
+              <div className="cart-total-price">Сумма заказа:<span>{sum}</span>грн.</div>
+            </div>
+            <div className='cart-bottom-buttons'>
+              <div className="cart-back-btn">
+                <NavLink to="/">
+                  <span>Вернуться назад</span>
+                </NavLink>
+              </div>
+              <div className="cart-pay-btn"><span>Оплатить сейчас</span></div>
+            </div>
           </div>
-          <div className="cart-pay-btn"><span>Оплатить сейчас</span></div>
-        </div>
+        }
       </div>
     );
   }
