@@ -15,28 +15,15 @@ function Pizzapage({items, itemsForSearch, typeBtn}) {
   }, []);
 
   const dicpatch = useDispatch()
+  const defaultType = {allBtb: false, meatBtn: false, chickenBtn: false, sausageBtn: false, spicyBtn: false}
   const changeType = type => {
-    if(type===ALL){
-      dicpatch(allTypeAction({allBtb: true, meatBtn: false, chickenBtn: false, sausageBtn: false, spicyBtn: false}))
-      setInputValue('')
-     }
-    if(type===MEAT){
-      dicpatch(meatTypeAction({allBtb: false, meatBtn: true, chickenBtn: false, sausageBtn: false, spicyBtn: false}));
-      setInputValue('')
-      }
-    if(type===CHICKEN){
-      dicpatch(chickenTypeAction({allBtb: false, meatBtn: false, chickenBtn: true, sausageBtn: false, spicyBtn: false})) 
-      setInputValue('')
-      }
-    if(type===SAUSAGE){
-      dicpatch(sausageTypeAction({allBtb: false, meatBtn: false, chickenBtn: false, sausageBtn: true, spicyBtn: false}))
-      setInputValue('')
-      }
-    if(type===SPICY){
-      dicpatch(spiceTypeAction({allBtb: false, meatBtn: false, chickenBtn: false, sausageBtn: false, spicyBtn: true}))
-      setInputValue('')
-      }
-    }
+    type===ALL && dicpatch(allTypeAction({...defaultType, allBtb: true}))
+    type===MEAT && dicpatch(meatTypeAction({...defaultType, meatBtn: true}))
+    type===CHICKEN && dicpatch(chickenTypeAction({...defaultType, chickenBtn: true})) 
+    type===SAUSAGE && dicpatch(sausageTypeAction({...defaultType, sausageBtn: true}))
+    type===SPICY && dicpatch(spiceTypeAction({...defaultType, spicyBtn: true}))
+    setInputValue('')
+  }
 
   // input
   const getInput = value => {

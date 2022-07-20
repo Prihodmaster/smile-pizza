@@ -1,15 +1,39 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {ADD_ITEM_TO_CART, REPLACE_ITEM_CART, SMALL_SIZE, MEDIUM_SIZE, BIG_SIZE} from '../store/types';
+import {totalItems} from '../store/itemsReducer'
 
 function Item({item, selectorVisible}) {
     const dicpatch = useDispatch()
-    const totalItems = useSelector(state => state.totalItems)
     const cart = useSelector(state => state.cart)
 
     const changeSize = size => {
-        size === SMALL_SIZE && dicpatch({type: size, payload: {size: "small", price: item.size.small.price, title: item.size.small.title}, id: item.id})
-        size === MEDIUM_SIZE && dicpatch({type: size, payload: {size: "medium", price: item.size.medium.price, title: item.size.medium.title}, id: item.id})
-        size === BIG_SIZE && dicpatch({type: size, payload: {size: "big", price: item.size.big.price, title: item.size.big.title}, id: item.id})
+        size === SMALL_SIZE && dicpatch({
+            type: size, 
+            payload: {
+                size: "small", 
+                price: item.size.small.price, 
+                title: item.size.small.title
+            }, 
+            id: item.id
+        })
+        size === MEDIUM_SIZE && dicpatch({
+            type: size, 
+            payload: {
+                size: "medium", 
+                price: item.size.medium.price, 
+                title: item.size.medium.title
+            }, 
+            id: item.id
+        })
+        size === BIG_SIZE && dicpatch({
+            type: size, 
+            payload: {
+                size: "big", 
+                price: item.size.big.price, 
+                title: item.size.big.title
+            }, 
+            id: item.id
+        })
     }
 
     const addToCart = id =>{
@@ -18,13 +42,25 @@ function Item({item, selectorVisible}) {
         if(carFindItem === undefined){
             dicpatch({
                 type: ADD_ITEM_TO_CART, 
-                payload: {id: findItem.id, logo: findItem.logo, title: findItem.title, total: Number(item.stateItem.total)+1, items: [{size: item.stateItem.title, price: item.stateItem.price}]}
+                payload: {
+                    id: findItem.id, 
+                    logo: findItem.logo, 
+                    title: findItem.title, 
+                    total: Number(item.stateItem.total)+1, 
+                    items: [{
+                        size: item.stateItem.title, 
+                        price: item.stateItem.price
+                    }]
+                }
             })
         }else{
             dicpatch({
                 type: REPLACE_ITEM_CART, 
                 id: findItem.id,
-                payload: {size: item.stateItem.title, price: item.stateItem.price}
+                payload: {
+                    size: item.stateItem.title, 
+                    price: item.stateItem.price
+                }
             })
         }
     }
@@ -42,9 +78,15 @@ function Item({item, selectorVisible}) {
             <div>
                 <div className={selectorVisible ? 'item-selector' : 'item-selector off'}>
                     <ul>
-                        <li className={item.stateItem.size === "small" ? "active" : ""} onClick={()=>changeSize(SMALL_SIZE)}>{item.size.small.title}</li>
-                        <li className={item.stateItem.size === "medium" ? "active" : ""} onClick={()=>changeSize(MEDIUM_SIZE)}>{item.size.medium.title}</li>
-                        <li className={item.stateItem.size === "big" ? "active" : ""} onClick={()=>changeSize(BIG_SIZE)}>{item.size.big.title}</li>
+                        <li className={item.stateItem.size === "small" ? "active" : ""} onClick={()=>changeSize(SMALL_SIZE)}>
+                            {item.size.small.title}
+                        </li>
+                        <li className={item.stateItem.size === "medium" ? "active" : ""} onClick={()=>changeSize(MEDIUM_SIZE)}>
+                            {item.size.medium.title}
+                        </li>
+                        <li className={item.stateItem.size === "big" ? "active" : ""} onClick={()=>changeSize(BIG_SIZE)}>
+                            {item.size.big.title}
+                        </li>
                     </ul>
                 </div>
                 <div className="item-bottom">

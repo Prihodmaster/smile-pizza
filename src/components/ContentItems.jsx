@@ -1,6 +1,5 @@
 import Item from './Item';
 
-
 function ContentItems({items, selectorVisible}) {
     return (
         <div className="content-items">

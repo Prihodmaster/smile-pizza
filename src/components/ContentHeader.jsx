@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {popSortAction, priceSortAction, titleSortAction} from '../store/sortReducer';
-
+import {SORT_POP, SORT_PRICE, SORT_TITLE} from '../store/types';
 
 function ContentHeader({title}) {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,13 +9,13 @@ function ContentHeader({title}) {
   
   const changeSort = type => {
     setIsOpen(!isOpen)
-    type==='популярности' && dispatch(popSortAction(type))
-    type==='цене' && dispatch(priceSortAction(type))
-    type==='названию' && dispatch(titleSortAction(type))
+    type==='популярности' && dispatch({type: SORT_POP, payload: type})
+    type==='цене' && dispatch({type: SORT_PRICE, payload: type})
+    type==='названию' && dispatch({type: SORT_TITLE, payload: type})
   }
 
   return (
-  <div className="content-header">
+    <div className="content-header">
       <div className="content-title">
         <b>{title}</b>
       </div>

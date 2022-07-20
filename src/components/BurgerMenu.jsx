@@ -1,7 +1,5 @@
 import {NavLink} from 'react-router-dom';
 
-
-
 function BurgerMenu({isOpen, clickOpen, links}) {
     return (
         <div className={isOpen ? 'burger-menu active' : 'burger-menu'}>

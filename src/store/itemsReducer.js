@@ -1,4 +1,3 @@
-import {sortByType} from '../App'
 import {
   SORT_POP, SORT_PRICE, SORT_TITLE, ALL, MEAT, CHICKEN, SAUSAGE, SPICY, 
   GET_INPUT, CLEAR_INPUT, 
@@ -14,7 +13,7 @@ const pasteItems = require('../items-json/paste.json');
 const saladItems = require('../items-json/salad.json');
 const sauceItems = require('../items-json/sauce.json');
 
-const defaultTotalItemsState = [
+export const totalItems = [
   ...pizzaItems, 
   ...dessertItems, 
   ...chickenItems, 
@@ -23,25 +22,19 @@ const defaultTotalItemsState = [
   ...saladItems, 
   ...sauceItems
 ]
-export const totalItemsReducer = (state = defaultTotalItemsState, action) => {
-  switch(action.type){
-    default: return state
-  }
-}
 
-const typeAllBtn = {
-  allBtb: true,
-  meatBtn: false,
-  chickenBtn: false,
-  sausageBtn: false,
-  spicyBtn: false
-}
 const defaultState = {
     pizza: {
       items: pizzaItems,
       itemsByType: pizzaItems,
       itemsByInput: pizzaItems,
-      typeBtn: typeAllBtn
+      typeBtn: {
+        allBtb: true,
+        meatBtn: false,
+        chickenBtn: false,
+        sausageBtn: false,
+        spicyBtn: false
+      }
     },
     dessert: dessertItems,
     chicken: chickenItems,
@@ -50,13 +43,19 @@ const defaultState = {
     salad: saladItems,
     sauce: sauceItems
   }
-  export const itemsReducer = (state = defaultState, action) => {
-    const findIdSize = (id, payload, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, ...payload} } : n )
-    const findIdTotal = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: Number(n.stateItem.total)+1} } : n )
-    const removeTotal = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: 0} } : n )
-    const clearTotal = arr => arr.map( n =>{return {...n, stateItem: {...n.stateItem, total: 0}}})
-    const minusItemCart = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: Number(n.stateItem.total)-1} } : n )
 
+const sortByType = (type, arr) => {
+  if(type ===SORT_POP) return [...arr.sort((a, b) => Number(a.id) > Number(b.id)  ? 1 : -1)]
+  if(type === SORT_PRICE) return [...arr.sort((a, b) => Number(a.size.small.price) > Number(b.size.small.price)  ? 1 : -1)]
+  if(type === SORT_TITLE) return [...arr.sort((a, b) => a.title > b.title  ? 1 : -1)]
+}
+const findIdSize = (id, payload, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, ...payload} } : n )
+const findIdTotal = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: Number(n.stateItem.total)+1} } : n )
+const removeTotal = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: 0} } : n )
+const clearTotal = arr => arr.map( n =>{return {...n, stateItem: {...n.stateItem, total: 0}}})
+const minusItemCart = (id, arr) => arr.map( n => n.id === id ? { ...n, stateItem: {...n.stateItem, total: Number(n.stateItem.total)-1} } : n )
+
+export const itemsReducer = (state = defaultState, action) => {
     const findIdTotalGroup = id => {
       return {
         pizza: {
@@ -121,139 +120,75 @@ const defaultState = {
         sauce: minusItemCart(id, state.sauce)
       }
     }
+    const sortByTypeGroup = type => {
+      return { 
+        pizza: {
+          ...state.pizza, 
+          items: sortByType(type, state.pizza.items), 
+          itemsByType: sortByType(type, state.pizza.itemsByType),
+          itemsByInput: sortByType(type, state.pizza.itemsByInput)
+        },
+        dessert: sortByType(type, state.dessert),
+        chicken: sortByType(type, state.chicken),
+        drink: sortByType(type, state.drink),
+        paste: sortByType(type, state.paste),
+        salad: sortByType(type, state.salad),
+        sauce: sortByType(type, state.sauce)
+    }
+    }
+    const findIdSizeGroup = (id, payload) => {
+      return {
+        ...state, 
+        drink: findIdSize(id, payload, state.drink),
+        pizza: {
+          ...state.pizza, 
+          items: findIdSize(id, payload, state.pizza.items),
+          itemsByType: findIdSize(id, payload, state.pizza.itemsByType),
+          itemsByInput: findIdSize(id, payload, state.pizza.itemsByInput)
+        }
+      }
+    }
+    const inputGroup = payload => {
+      return {
+        ...state, 
+        pizza: {
+          ...state.pizza, 
+          itemsByInput: payload
+        }
+      }
+    }
+    const filterTypeGroup = (type, payload) => {
+      let tempType;
+      if(type===ALL){tempType = state.pizza.items}
+      if(type===MEAT){tempType = state.pizza.items.filter(item=>item.ingredients.meat === 'yes')}
+      if(type===CHICKEN){tempType = state.pizza.items.filter(item=>item.ingredients.chicken === 'yes')}
+      if(type===SAUSAGE){tempType = state.pizza.items.filter(item=>item.ingredients.sausage === 'yes')}
+      if(type===SPICY){tempType = state.pizza.items.filter(item=>item.ingredients.spicy === 'yes')}
+      return {
+        ...state, 
+        pizza: {
+          ...state.pizza, 
+          typeBtn: payload, 
+          itemsByType: tempType,
+          itemsByInput: tempType
+        }
+     }
+    }
 
     switch(action.type){
-        case SMALL_SIZE: return {
-          ...state, 
-          drink: findIdSize(action.id, action.payload, state.drink),
-          pizza: {
-            ...state.pizza, 
-            items: findIdSize(action.id, action.payload, state.pizza.items),
-            itemsByType: findIdSize(action.id, action.payload, state.pizza.itemsByType),
-            itemsByInput: findIdSize(action.id, action.payload, state.pizza.itemsByInput)
-          }
-        }
-        case MEDIUM_SIZE: return {
-          ...state, 
-          drink: findIdSize(action.id, action.payload, state.drink),
-          pizza: {
-            ...state.pizza, 
-            items: findIdSize(action.id, action.payload, state.pizza.items),
-            itemsByType: findIdSize(action.id, action.payload, state.pizza.itemsByType),
-            itemsByInput: findIdSize(action.id, action.payload, state.pizza.itemsByInput)
-          }
-        }
-        case BIG_SIZE: return {
-          ...state, 
-          drink: findIdSize(action.id, action.payload, state.drink),
-          pizza: {
-            ...state.pizza, 
-            items: findIdSize(action.id, action.payload, state.pizza.items),
-            itemsByType: findIdSize(action.id, action.payload, state.pizza.itemsByType),
-            itemsByInput: findIdSize(action.id, action.payload, state.pizza.itemsByInput)
-          }
-        }
-        case SORT_POP: return { 
-            pizza: {
-              ...state.pizza, 
-              items: sortByType(action.type, state.pizza.items), 
-              itemsByType: sortByType(action.type, state.pizza.itemsByType),
-              itemsByInput: sortByType(action.type, state.pizza.itemsByInput)
-            },
-            dessert: sortByType(action.type, state.dessert),
-            chicken: sortByType(action.type, state.chicken),
-            drink: sortByType(action.type, state.drink),
-            paste: sortByType(action.type, state.paste),
-            salad: sortByType(action.type, state.salad),
-            sauce: sortByType(action.type, state.sauce)
-        }
-        case SORT_PRICE: return {
-            pizza: {
-              ...state.pizza, 
-              items: sortByType(action.type, state.pizza.items), 
-              itemsByType: sortByType(action.type, state.pizza.itemsByType),
-              itemsByInput: sortByType(action.type, state.pizza.itemsByInput)
-            },
-            dessert: sortByType(action.type, state.dessert),
-            chicken: sortByType(action.type, state.chicken),
-            drink: sortByType(action.type, state.drink),
-            paste: sortByType(action.type, state.paste),
-            salad: sortByType(action.type, state.salad),
-            sauce: sortByType(action.type, state.sauce)
-        }
-        case SORT_TITLE: return {   
-            pizza: {
-              ...state.pizza, 
-              items: sortByType(action.type, state.pizza.items), 
-              itemsByType: sortByType(action.type, state.pizza.itemsByType),
-              itemsByInput: sortByType(action.type, state.pizza.itemsByInput)
-            },
-            dessert: sortByType(action.type, state.dessert),
-            chicken: sortByType(action.type, state.chicken),
-            drink: sortByType(action.type, state.drink),
-            paste: sortByType(action.type, state.paste),
-            salad: sortByType(action.type, state.salad),
-            sauce: sortByType(action.type, state.sauce)
-        }
-        case ALL: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            typeBtn: action.payload, 
-            itemsByType: state.pizza.items,
-            itemsByInput: state.pizza.items,
-          }
-        }
-        case MEAT: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            typeBtn: action.payload, 
-            itemsByType: state.pizza.items.filter(item=>item.ingredients.meat === 'yes'),
-            itemsByInput: state.pizza.items.filter(item=>item.ingredients.meat === 'yes')
-          }
-       }
-        case CHICKEN: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            typeBtn: action.payload, 
-            itemsByType: state.pizza.items.filter(item=>item.ingredients.chicken === 'yes'),
-            itemsByInput: state.pizza.items.filter(item=>item.ingredients.chicken === 'yes')
-          }
-       }
-        case SAUSAGE: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-          typeBtn: action.payload, 
-          itemsByType: state.pizza.items.filter(item=>item.ingredients.sausage === 'yes'),
-          itemsByInput: state.pizza.items.filter(item=>item.ingredients.sausage === 'yes')
-          }
-        }
-        case SPICY: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            typeBtn: action.payload, 
-            itemsByType: state.pizza.items.filter(item=>item.ingredients.spicy === 'yes'),
-            itemsByInput: state.pizza.items.filter(item=>item.ingredients.spicy === 'yes')
-          }
-         }
-        case GET_INPUT: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            itemsByInput: action.payload
-          }
-        }
-        case CLEAR_INPUT: return {
-          ...state, 
-          pizza: {
-            ...state.pizza, 
-            itemsByInput: action.payload
-          }
-        }
+        case SMALL_SIZE: return findIdSizeGroup(action.id, action.payload)
+        case MEDIUM_SIZE: return findIdSizeGroup(action.id, action.payload)
+        case BIG_SIZE: return findIdSizeGroup(action.id, action.payload)
+        case SORT_POP: return sortByTypeGroup(action.type)
+        case SORT_PRICE: return sortByTypeGroup(action.type)
+        case SORT_TITLE: return sortByTypeGroup(action.type)
+        case ALL: return filterTypeGroup(action.type, action.payload)
+        case MEAT: return filterTypeGroup(action.type, action.payload)
+        case CHICKEN: return filterTypeGroup(action.type, action.payload)
+        case SAUSAGE: return filterTypeGroup(action.type, action.payload)
+        case SPICY: return filterTypeGroup(action.type, action.payload)
+        case GET_INPUT: return inputGroup(action.payload)
+        case CLEAR_INPUT: return inputGroup(action.payload)
         case ADD_ITEM_TO_CART: return findIdTotalGroup(action.payload.id)
         case REPLACE_ITEM_CART: return findIdTotalGroup(action.id)
         case REMOVE_ITEM_CART: return removeTotalGroup(action.id)
@@ -263,8 +198,8 @@ const defaultState = {
     }
   }
 
-  export const allTypeAction = (payload) => ({type: ALL, payload})
-  export const meatTypeAction = (payload) => ({type: MEAT, payload})
-  export const chickenTypeAction = (payload) => ({type: CHICKEN, payload})
-  export const sausageTypeAction = (payload) => ({type: SAUSAGE, payload})
-  export const spiceTypeAction = (payload) => ({type: SPICY, payload})
+  export const allTypeAction = payload => ({type: ALL, payload})
+  export const meatTypeAction = payload => ({type: MEAT, payload})
+  export const chickenTypeAction = payload => ({type: CHICKEN, payload})
+  export const sausageTypeAction = payload => ({type: SAUSAGE, payload})
+  export const spiceTypeAction = payload => ({type: SPICY, payload})

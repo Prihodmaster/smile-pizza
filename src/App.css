@@ -472,6 +472,7 @@ footer {
   border-radius: 13px;
   padding: 5px 20px 4px 20px;
   min-width: 100px;
+  max-height: 30.2px;
   text-align: center;
   cursor: pointer;
   transition: background-color .15s ease-in-out;
@@ -481,6 +482,7 @@ footer {
   color: #fe5f1e;
   font-weight: 600;
   font-size: 16px;
+  line-height: 19px;
 }
 
 .item-bottom button:hover span {
@@ -508,7 +510,7 @@ footer {
   font-size: 13px;
   line-height: 22px;
   position: relative;
-  top: -1px;
+  top: -1.7px;
   left: 12px;
   padding: 1px 1px 0 0;
 }
@@ -525,7 +527,7 @@ footer {
 
 .content-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
   justify-items: center;
   gap: 1rem;
 }
@@ -915,6 +917,8 @@ footer {
     width: 50%;
   }
 }
+
+
 
 
 

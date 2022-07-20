@@ -14,13 +14,6 @@ import Notfoundpage from './pages/Notfoundpage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-
-export const sortByType = (type, arr) => {
-  if(type ===SORT_POP) return [...arr.sort((a, b) => Number(a.id) > Number(b.id)  ? 1 : -1)]
-  if(type === SORT_PRICE) return [...arr.sort((a, b) => Number(a.size.small.price) > Number(b.size.small.price)  ? 1 : -1)]
-  if(type === SORT_TITLE) return [...arr.sort((a, b) => a.title > b.title  ? 1 : -1)]
-}
-
 function App() {
   const pizza = useSelector(state => state.items.pizza)
   const dessert = useSelector(state => state.items.dessert)

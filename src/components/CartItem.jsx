@@ -9,7 +9,10 @@ function CartItem({item, remove}) {
         dicpatch({
             type: REPLACE_ITEM_CART, 
             id: item.id,
-            payload: {size: item.items[item.items.length-1].size, price: item.items[item.items.length-1].price}
+            payload: {
+                size: item.items[item.items.length-1].size, 
+                price: item.items[item.items.length-1].price
+            }
         })
     }
     const minusCartItem = () => {
